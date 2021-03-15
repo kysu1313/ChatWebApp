@@ -1,0 +1,38 @@
+﻿@page
+<div class="container">
+    <div class="row">&nbsp;&nbsp;</div>
+    <div class="row">
+        <div class="col-2">User Name: </div>
+        <div class="col-4"><input type="text" id="userName" /></div>
+    </div>
+    <div class="row">
+        <div class="col-2">Message</div>
+        <div class="col-4"><input type="text" id="message" /></div>
+    </div>
+    <div class="row">&nbsp;&nbsp;</div>
+    <div class="row">
+        <div class="col-6">
+            <input type="button" id="btnSend" value="Send" />
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <hr />
+        <hr />
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <ul id="listMessage"></ul>
+    </div>
+</div>
+
+<script src="~/js/signalr-js/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
+
+<script>
+    function onTyping(e) {
+
+    }
+</script>

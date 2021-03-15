@@ -1,0 +1,66 @@
+﻿
+<div class="text-center">
+    <div class="jumbotron">
+        <p>Welcom to Free Chat!</p>
+        <div class="btn-group">
+            <button class="btn btn-primary">Create an account to chat</button>
+            <button class="btn btn-primary">Sign In</button>
+        </div>
+        
+    </div>
+</div>
+
+
+    @*@page
+        <div class="container">
+            <div class="row">&nbsp;&nbsp;</div>
+            <div class="row">
+                <div class="col-2">User Name: </div>
+                <div class="col-4"><input type="text" id="userName" /></div>
+            </div>
+            <div class="row">
+                <div class="col-2">Message</div>
+                <div class="col-4"><input type="text" id="message" /></div>
+            </div>
+            <div class="row">&nbsp;&nbsp;</div>
+            <div class="row">
+                <div class="col-6">
+                    <input type="button" id="btnSend" value="Send" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <hr />
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul id="listMessage"></ul>
+            </div>
+        </div>
+
+        <script src="~/js/signalr-js/dist/browser/signalr.js"></script>
+        <script src="~/js/chat.js"></script>
+
+        <script>
+            function onTyping(e) {
+
+            }
+        </script>*@
+
+
+    @*<script>
+        // The `typingStart` will notify the SignallR Hub that the current client is typing.
+        // The Hub, in turn, will notify all the other clients that the user has started typing.
+        function onTypingStart(e) {
+        chatHub.invoke("sendTyping", chat.getUser());
+        }
+
+        // The `post` handler will send the user data and the typed text to the SignalR Hub.
+        // The Hub will then forward that info to the other clients.
+        function onPost(args) {
+        chatHub.invoke("send", chat.getUser(), args.text);
+        }
+        </script>*@
